@@ -9,7 +9,9 @@ const app = express()
 
 app.get("/", (req, res) => {
   res.send("Hello world 123")
-} )
+})
+
+app.use("/api/auth", authRoutes)
 
 app.listen(process.env.PORT, () => {
   connectDB()
